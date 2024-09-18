@@ -2,7 +2,7 @@ import re
 import yaml
 
 
-def to_yaml():
+def to_yaml() -> str:
     repositories = "manifests/old.md"
     with open(repositories) as fd:
         repos = fd.readlines()
