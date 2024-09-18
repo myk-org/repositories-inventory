@@ -8,7 +8,7 @@ output-format = "grouped"
 exclude = [".git", ".venv", ".mypy_cache", ".tox", "__pycache__"]
 
 [tool.poetry]
-name = "msi"
+name = "repositories-inventory"
 version = "0.1.0"
 description = "General scripts"
 authors = ["Meni Yakove <myakove@gmail.com>"]

@@ -1,2 +1,3 @@
-# MSI
-Managed services integrations dummy repo for openshift.ci
+# Repositories Inventory
+
+List and manage all our repositories maintained by us

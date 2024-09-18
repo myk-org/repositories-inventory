@@ -16,8 +16,8 @@ poetry install
 Globally
 
 ```bash
-git clone https://github.com/CSPI-QE/MSI.git
-cd MSI
+git clone https://github.com/myk-org/repositories-inventory.git
+cd repositories-inventory
 pipx install .
 ```
 
@@ -39,7 +39,7 @@ With pipx
 pipx install .
 ```
 
-if already installed run `pipx uninstall MSI && pipx install .`
+if already installed run `pipx install . -f`
 
 ## release-it-repos
 
@@ -55,7 +55,7 @@ export GIT_BASE_DIR=<git repositories path>
 
 ```yaml
 git-base-dir: ~/git/
-repositories: https://raw.githubusercontent.com/CSPI-QE/MSI/main/REPOS_INVENTORY.md # Either link to inventory file or list of repositories
+repositories: https://raw.githubusercontent.com/myk-org/repositories-inventory/refs/heads/main/REPOS_INVENTORY.md
 repositories:
   https://github.com/user/repository1:
     - main
