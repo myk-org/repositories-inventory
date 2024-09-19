@@ -1,5 +1,14 @@
 # Scripts
 
+- release-it-repos
+- poetry-update-repo
+- generate-inventory-markdown
+- github-auto-lgtm
+- poetry-get-deps
+- poetry-generate-renovate
+
+Run any command with `--help` to see usage
+
 ## Requirements
 
 - [poetry](https://python-poetry.org/)
@@ -7,13 +16,13 @@
 
 ## Installation
 
-With poetry
+##### poetry
 
 ```bash
 poetry install
 ```
 
-Globally
+##### pipx
 
 ```bash
 git clone https://github.com/myk-org/repositories-inventory.git
@@ -27,27 +36,25 @@ pipx install .
 git remote update
 ```
 
-With poetry
+##### poetry
 
 ```bash
 poetry install
 ```
 
-With pipx
+##### pipx
 
 ```bash
-pipx install .
+pipx install . -f
 ```
-
-if already installed run `pipx install . -f`
 
 ## release-it-repos
 
-Check and release to Pypi using [release-it](https://github.com/release-it/release-it) for all repositories under [REPOS_INVENTORY](../REPOS_INVENTORY.md)
+Check and release to `Pypi` using [release-it](https://github.com/release-it/release-it) for all repositories under [REPOS_INVENTORY](../REPOS_INVENTORY.md)
 
 ### Usage
 
-set os environment or in the config file to base git repositories path
+Set base `git` directory via OS environment or in the config file.
 
 ```bash
 export GIT_BASE_DIR=<git repositories path>
@@ -63,7 +70,7 @@ repositories:
     - main
     - feature
 
-repositories-mapping: # IF local repository folder is different from the repository name
+repositories-mapping: # If local repository folder is different from the repository name
   cloud-tools: cloud-tools-upstream
 
 include-repositories: # Check only these repositories
@@ -72,25 +79,5 @@ include-repositories: # Check only these repositories
 
 ### Usage
 
-run `poetry run release-it-repos` to execute the script
+Run `poetry run release-it-repos` to execute the script
 Check `poetry run release-it-repos --help` for more info
-
-## poetry-update-repo
-
-Update local repository dependencies
-Must be run from the root of the repository
-
-```bash
-poetry run poetry-update-repo
-```
-
-## generate-inventory-markdown
-
-Generate REPOS_INVENTORY.md file with the content from manifests/repositories.yaml file
-Must be run from the root of the repository
-
-### Usage
-
-```bash
-generate-inventory-markdown
-```

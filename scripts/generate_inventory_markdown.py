@@ -4,6 +4,11 @@ import click
 
 @click.command("generate-inventory-markdown")
 def generate_inverntory_markfown() -> None:
+    """
+    Generate REPOS_INVENTORY.md file with the content from manifests/repositories.yaml
+
+    Must be run from the root of the repository
+    """
     markdown = """
 # Repository inventory
 

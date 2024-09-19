@@ -22,6 +22,7 @@ poetry-update-repo = "scripts.poetry_tools:update_all_deps"
 poetry-get-deps = "scripts.poetry_tools:get_all_deps"
 poetry-generate-renovate = "scripts.poetry_tools:generate_renovate_json"
 generate-inventory-markdown = "scripts.generate_inventory_markdown:generate_inverntory_markfown"
+github-auto-lgtm = "scripts.gh_lgtm:main"
 
 [tool.poetry.dependencies]
 python = "^3.11"
@@ -32,6 +33,7 @@ rich = "^13.7.1"
 python-simple-logger = "^1.0.19"
 pyaml-env = "^1.2.1"
 pyhelper-utils = "^0.0.27"
+pygithub = "^2.4.0"
 
 
 [tool.poetry.group.dev.dependencies]
