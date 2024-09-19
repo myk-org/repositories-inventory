@@ -3,7 +3,14 @@ import click
 
 
 @click.command("generate-inventory-markdown")
-def generate_inverntory_markfown() -> None:
+@click.option(
+    "-r",
+    "--repositories-yaml",
+    help="Path to repositories.yaml",
+    default="manifests/repositories.yaml",
+    type=click.Path(exists=True),
+)
+def generate_inventory_markdown(repositories_yaml: str) -> None:
     """
     Generate REPOS_INVENTORY.md file with the content from manifests/repositories.yaml
 
@@ -20,7 +27,7 @@ Template for a new GitHub python repository: [python-template-repository](https:
 |---|---|---|---|
 """
 
-    with open("manifests/repositories.yaml") as rfd:
+    with open(repositories_yaml) as rfd:
         repos = yaml.safe_load(rfd)
 
     check_mark = ":heavy_check_mark:"
@@ -42,4 +49,4 @@ Template for a new GitHub python repository: [python-template-repository](https:
 
 
 if __name__ == "__main__":
-    generate_inverntory_markfown()
+    generate_inventory_markdown()

@@ -7,8 +7,10 @@ import shlex
 import json
 from typing import List
 
+import click
 
-def get_all_deps() -> List[str]:
+
+def get_all_user_deps() -> List[str]:
     """
     Returns all dependencies in pyproject.toml
     """
@@ -42,11 +44,11 @@ def get_all_deps() -> List[str]:
     return all_deps
 
 
-def update_all_deps() -> None:
+def update_all_user_deps() -> None:
     """
     Updates all dependencies in pyproject.toml
     """
-    for dep in get_all_deps():
+    for dep in get_all_user_deps():
         print(f"Updating {dep}")
         subprocess.run(shlex.split(f"poetry update {dep}"))
 
@@ -57,7 +59,7 @@ def generate_renovate_json() -> None:
     in order to force renovate to update all dependencies in one PR.
     """
     file_name = "renovate.json"
-    pkgs_rules = {"matchPackagePatterns": get_all_deps(), "groupName": "poetry-deps"}
+    pkgs_rules = {"matchPackagePatterns": get_all_user_deps(), "groupName": "poetry-deps"}
     if os.path.isfile(file_name):
         with open(file_name, "r") as fd:
             _json = json.load(fd)
@@ -82,5 +84,27 @@ def generate_renovate_json() -> None:
         fd.write(json.dumps(_json))
 
 
+@click.command("Poetry Tools")
+@click.option("-u", "--update", is_flag=True, help="Update all user dependencies")
+@click.option("-g", "--generate", is_flag=True, help="Generate renovate.json")
+@click.option("-l", "--list", is_flag=True, help="List all user dependencies")
+def main(update: bool, generate: bool, list: bool) -> None:
+    """
+    \b
+    List all user dependencies with Poetry
+    Update all user dependencies with Poetry
+    Generate `renovate.json` based on Poetry configuration
+    """
+    if update:
+        update_all_user_deps()
+    elif generate:
+        generate_renovate_json()
+    elif list:
+        print(get_all_user_deps())
+
+    else:
+        click.echo("Run with `--help` for more information")
+
+
 if __name__ == "__main__":
-    pass
+    main()

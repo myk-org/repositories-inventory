@@ -1,11 +1,9 @@
 # Scripts
 
 - release-it-repos
-- poetry-update-repo
 - generate-inventory-markdown
 - github-auto-lgtm
-- poetry-get-deps
-- poetry-generate-renovate
+- poetry-tools
 
 Run any command with `--help` to see usage
 

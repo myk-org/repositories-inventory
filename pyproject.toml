@@ -7,6 +7,15 @@ output-format = "grouped"
 [tool.ruff.format]
 exclude = [".git", ".venv", ".mypy_cache", ".tox", "__pycache__"]
 
+[tool.mypy]
+check_untyped_defs = true
+disallow_any_generics = false
+disallow_incomplete_defs = true
+disallow_untyped_defs = true
+no_implicit_optional = true
+show_error_codes = true
+warn_unused_ignores = true
+
 [tool.poetry]
 name = "repositories-inventory"
 version = "0.1.0"
@@ -18,11 +27,9 @@ packages = [{ include = "scripts" }]
 
 [tool.poetry.scripts]
 release-it-repos = "scripts.release_it_repos:main"
-poetry-update-repo = "scripts.poetry_tools:update_all_deps"
-poetry-get-deps = "scripts.poetry_tools:get_all_deps"
-poetry-generate-renovate = "scripts.poetry_tools:generate_renovate_json"
-generate-inventory-markdown = "scripts.generate_inventory_markdown:generate_inverntory_markfown"
-github-auto-lgtm = "scripts.gh_lgtm:main"
+poetry-tools = "scripts.poetry_tools:main"
+generate-inventory-markdown = "scripts.generate_inventory_markdown:generate_inventory_markdown"
+github-auto-lgtm = "scripts.github_auto_lgtm:main"
 
 [tool.poetry.dependencies]
 python = "^3.11"
