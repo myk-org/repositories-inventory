@@ -9,41 +9,21 @@ Run any command with `--help` to see usage
 
 ## Requirements
 
-- [poetry](https://python-poetry.org/)
-- [pipx](https://github.com/pypa/pipx)
+- [uv](https://github.com/astral-sh/uv)
 
 ## Installation
 
 ##### poetry
 
 ```bash
-poetry install
-```
-
-##### pipx
-
-```bash
-git clone https://github.com/myk-org/repositories-inventory.git
-cd repositories-inventory
-pipx install .
+uv tool install .
 ```
 
 ### Update
 
 ```bash
 git remote update
-```
-
-##### poetry
-
-```bash
-poetry install
-```
-
-##### pipx
-
-```bash
-pipx install . -f
+uv tool install . --force
 ```
 
 ## release-it-repos
