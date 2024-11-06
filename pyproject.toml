@@ -16,37 +16,52 @@ no_implicit_optional = true
 show_error_codes = true
 warn_unused_ignores = true
 
-[tool.poetry]
+[project]
+requires-python = ">=3.9"
 name = "repositories-inventory"
 version = "0.1.0"
 description = "General scripts"
-authors = ["Meni Yakove <myakove@gmail.com>"]
 license = "Apache-2.0"
 readme = "README.md"
-packages = [{ include = "scripts" }]
-
-[tool.poetry.scripts]
+dependencies = [
+  "click>=8.1.7",
+  "pyaml-env>=1.2.1",
+  "pygithub>=2.4.0",
+  "pyhelper-utils>=1.0.1",
+  "python-simple-logger>=2.0.0",
+  "pyyaml>=6.0.2",
+  "requests>=2.32.3",
+  "rich>=13.9.4",
+]
+[project.scripts]
 release-it-repos = "scripts.release_it_repos:main"
 poetry-tools = "scripts.poetry_tools:main"
 generate-inventory-markdown = "scripts.generate_inventory_markdown:generate_inventory_markdown"
 github-auto-lgtm = "scripts.github_auto_lgtm:main"
 
-[tool.poetry.dependencies]
-python = "^3.11"
-pyyaml = "^6.0.1"
-requests = "^2.31.0"
-click = "^8.1.7"
-rich = "^13.7.1"
-python-simple-logger = "^1.0.19"
-pyaml-env = "^1.2.1"
-pyhelper-utils = "^0.0.27"
-pygithub = "^2.4.0"
+[[project.authors]]
+name = "Meni Yakove"
+email = " myakove@gmail.com"
 
+[[project.authors]]
+name = "Ruth Netser"
+email = "ruth.netser@gmail.com"
 
-[tool.poetry.group.dev.dependencies]
-ipython = "^8.23.0"
-ipdb = "^0.13.13"
+[project.urls]
+homepage = "https://github.com/myk-org/repositories-inventory"
+repository = "https://github.com/myk-org/repositories-inventory"
+"Bug Tracker" = "https://github.com/myk-org/repositories-inventory/issues"
+
+[tool.hatch.build.targets.wheel]
+packages = ["scripts"]
+
+[tool.uv]
+dev-dependencies = [
+    "ipdb>=0.13.13",
+    "ipython>=8.18.1",
+]
+
 
 [build-system]
-requires = ["poetry-core"]
-build-backend = "poetry.core.masonry.api"
+requires = ["hatchling"]
+build-backend = "hatchling.build"
