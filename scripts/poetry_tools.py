@@ -87,8 +87,8 @@ def generate_renovate_json() -> None:
 @click.command("Poetry Tools")
 @click.option("-u", "--update", is_flag=True, help="Update all user dependencies")
 @click.option("-g", "--generate", is_flag=True, help="Generate renovate.json")
-@click.option("-l", "--list", is_flag=True, help="List all user dependencies")
-def main(update: bool, generate: bool, list: bool) -> None:
+@click.option("-l", "--list-deps", is_flag=True, help="List all user dependencies")
+def main(update: bool, generate: bool, list_deps: bool) -> None:
     """
     \b
     List all user dependencies with Poetry
@@ -99,7 +99,7 @@ def main(update: bool, generate: bool, list: bool) -> None:
         update_all_user_deps()
     elif generate:
         generate_renovate_json()
-    elif list:
+    elif list_deps:
         print(" ".join(get_all_user_deps()))
 
     else:
