@@ -100,7 +100,7 @@ def main(update: bool, generate: bool, list: bool) -> None:
     elif generate:
         generate_renovate_json()
     elif list:
-        print(get_all_user_deps())
+        print(" ".join(get_all_user_deps()))
 
     else:
         click.echo("Run with `--help` for more information")
