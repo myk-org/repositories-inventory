@@ -216,3 +216,11 @@ vaultrun:
   github_url: https://github.com/RedHatQE/vaultrun
   release: true
   release_url: https://pypi.org/project/vaultrun/
+
+mtv-api-tests:
+  branches:
+    - main
+  container: true
+  container_url: TBD
+  github_url: https://github.com/RedHatQE/mtv-api-tests
+  release: false

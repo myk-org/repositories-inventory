@@ -31,3 +31,4 @@ Template for a new GitHub python repository: [python-template-repository](https:
 | [rosa-python-client](https://github.com/RedHatQE/rosa-python-client) | :x: | [:heavy_check_mark:](https://pypi.org/project/rosa-python-client/) | `main` |
 | [timeout-sampler](https://github.com/RedHatQE/timeout-sampler) | :x: | [:heavy_check_mark:](https://pypi.org/project/timeout-sampler/) | `main` |
 | [vaultrun](https://github.com/RedHatQE/vaultrun) | :x: | [:heavy_check_mark:](https://pypi.org/project/vaultrun/) | `main` |
+| [mtv-api-tests](https://github.com/RedHatQE/mtv-api-tests) | [:heavy_check_mark:](TBD) | :x: | `main` |
