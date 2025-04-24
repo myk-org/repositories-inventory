@@ -1,18 +1,18 @@
+import os
 import re
 from typing import List, Tuple
-from github import Github
-import os
 
-from github.Issue import Issue
-import rich
 import click
+import rich
+from github import Github
+from github.Issue import Issue
 from rich.prompt import Confirm
 from rich.table import Table, box
 
 
 def generate_table() -> Table:
     table = Table(
-        title="Issues to LGTM",
+        title="Issues to Approve",
         show_lines=True,
         box=box.ROUNDED,
         expand=False,
@@ -58,7 +58,7 @@ def generate_formatted_str(issue: Issue, commiter: str) -> Tuple[str, str]:
 @click.option("-t", "--token", help="GitHub token")
 @click.option("-d", "--dry-run", is_flag=True, help="Dry run")
 def main(users: str, yes: bool, token: str, dry_run: bool) -> None:
-    issues_to_lgtm: List[Issue] = []
+    issues_to_approve: List[Issue] = []
     users_to_match: List[str] = users.split(",")
     api = Github(login_or_token=token or os.environ["GITHUB_TOKEN"])
     table = generate_table()
@@ -74,15 +74,15 @@ def main(users: str, yes: bool, token: str, dry_run: bool) -> None:
         )
 
         if yes:
-            lgtm = True
+            approve = True
         else:
-            lgtm = Confirm.ask(
-                f"{_repository}: {issue.title}, by {_commiter}\npackages:\n{formatted_packages_str_for_ask}\nLGTM?",
+            approve = Confirm.ask(
+                f"{_repository}: {issue.title}, by {_commiter}\npackages:\n{formatted_packages_str_for_ask}\nApprove?",
                 choices=["y", "n"],
                 default="y",
             )
-        if lgtm:
-            issues_to_lgtm.append(issue)
+        if approve:
+            issues_to_approve.append(issue)
             table.add_row(
                 _repository,
                 issue.title.strip(),
@@ -90,18 +90,18 @@ def main(users: str, yes: bool, token: str, dry_run: bool) -> None:
                 formatted_packages_str_for_table,
             )
 
-    if issues_to_lgtm:
+    if issues_to_approve:
         rich.print(table)
-        lgtm_all = Confirm.ask(
-            "lgtm all issues?",
+        approve_all = Confirm.ask(
+            "Approve all issues?",
             choices=["y", "n"],
             default="y",
         )
-        if lgtm_all:
-            for _issue in issues_to_lgtm:
-                rich.print(f"{_issue.repository.full_name}: lgtm {_issue.title} by {_issue.user.login}. {dry_run=}")
+        if approve_all:
+            for _issue in issues_to_approve:
+                rich.print(f"{_issue.repository.full_name}: approve {_issue.title} by {_issue.user.login}. {dry_run=}")
                 if not dry_run:
-                    _issue.create_comment("/lgtm")
+                    _issue.create_comment("/approve")
 
 
 if __name__ == "__main__":
