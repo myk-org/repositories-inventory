@@ -36,7 +36,7 @@ dependencies = [
 [project.scripts]
 release-it-repos = "scripts.release_it_repos:main"
 generate-inventory-markdown = "scripts.generate_inventory_markdown:generate_inventory_markdown"
-github-auto-lgtm = "scripts.github_auto_lgtm:main"
+github-auto-approve = "scripts.github_auto_approve:main"
 
 [[project.authors]]
 name = "Meni Yakove"
