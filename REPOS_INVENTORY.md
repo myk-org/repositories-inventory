@@ -7,7 +7,6 @@ Template for a new GitHub python repository: [python-template-repository](https:
 
 | Name  | Container | Release | Tags |
 |---|---|---|---|
-| [aws-cost-reporter](https://github.com/RedHatQE/aws-cost-reporter) | [:heavy_check_mark:](https://quay.io/repository/redhat_msi/aws-cost-reporter) | [:heavy_check_mark:]() | `main` |
 | [ci-jobs-trigger](https://github.com/RedHatQE/ci-jobs-trigger) | [:heavy_check_mark:](https://quay.io/repository/redhat_msi/ci-jobs-trigger) | [:heavy_check_mark:](https://github.com/RedHatQE/ci-jobs-trigger/releases) | `main` |
 | [cloud-tools](https://github.com/RedHatQE/cloud-tools) | :x: | [:heavy_check_mark:](https://pypi.org/project/redhat-qe-cloud-tools/) | `main` |
 | [fedora-zsh](https://github.com/RedHatQE/fedora-zsh) | :x: | :x: | `main` |
@@ -19,7 +18,6 @@ Template for a new GitHub python repository: [python-template-repository](https:
 | [openshift-cli-installer](https://github.com/RedHatQE/openshift-cli-installer) | [:heavy_check_mark:](https://quay.io/repository/redhat_msi/openshift-cli-installer) | [:heavy_check_mark:](https://pypi.org/project/openshift-cli-installer/) | `main` |
 | [openshift-cluster-management-python-client](https://github.com/RedHatQE/openshift-cluster-management-python-client) | :x: | [:heavy_check_mark:](<[openshift-cluster-management-python-client](https://pypi.org/project/openshift-cluster-management-python-client/)>) | `main` |
 | [openshift-cluster-management-python-wrapper](https://github.com/RedHatQE/openshift-cluster-management-python-wrapper) | :x: | [:heavy_check_mark:](https://pypi.org/project/openshift-cluster-management-python-wrapper/) | `main` |
-| [openshift-day2-configurator](https://github.com/RedHatQE/openshift-day2-configurator) | :x: | [:heavy_check_mark:](https://pypi.org/project/openshift-day2-configurator/) | `main` |
 | [openshift-python-utilities](https://github.com/RedHatQE/openshift-python-utilities) | :x: | [:heavy_check_mark:](https://pypi.org/project/openshift-python-utilities/) | `main` |
 | [openshift-python-wrapper](https://github.com/RedHatQE/openshift-python-wrapper) | :x: | [:heavy_check_mark:](https://pypi.org/project/openshift-python-wrapper/) | `main` `v4.18` `v4.17` `v4.16` |
 | [openshift-python-wrapper-data-collector](https://github.com/RedHatQE/openshift-python-wrapper-data-collector) | :x: | [:heavy_check_mark:](https://pypi.org/project/openshift-python-wrapper-data-collector/) | `main` |
