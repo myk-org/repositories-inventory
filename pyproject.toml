@@ -35,7 +35,6 @@ dependencies = [
 ]
 [project.scripts]
 release-it-repos = "scripts.release_it_repos:main"
-poetry-tools = "scripts.poetry_tools:main"
 generate-inventory-markdown = "scripts.generate_inventory_markdown:generate_inventory_markdown"
 github-auto-lgtm = "scripts.github_auto_lgtm:main"
 
@@ -56,10 +55,7 @@ repository = "https://github.com/myk-org/repositories-inventory"
 packages = ["scripts"]
 
 [tool.uv]
-dev-dependencies = [
-    "ipdb>=0.13.13",
-    "ipython>=8.18.1",
-]
+dev-dependencies = ["ipdb>=0.13.13", "ipython>=8.18.1"]
 
 
 [build-system]
