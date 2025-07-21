@@ -101,7 +101,7 @@ def main(users: str, yes: bool, token: str, dry_run: bool) -> None:
             for _issue in issues_to_approve:
                 rich.print(f"{_issue.repository.full_name}: approve {_issue.title} by {_issue.user.login}. {dry_run=}")
                 if not dry_run:
-                    _issue.create_comment("/approve")
+                    _issue.create_comment("/approve\n/lgtm")
 
 
 if __name__ == "__main__":
