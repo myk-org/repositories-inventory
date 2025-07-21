@@ -73,27 +73,18 @@ def main(users: str, yes: bool, token: str, dry_run: bool) -> None:
             issue=issue, commiter=_commiter
         )
 
-        if yes:
-            approve = True
-        else:
-            approve = Confirm.ask(
-                f"{_repository}: {issue.title}, by {_commiter}\npackages:\n{formatted_packages_str_for_ask}\nApprove?",
-                choices=["y", "n"],
-                default="y",
-            )
-        if approve:
-            issues_to_approve.append(issue)
-            table.add_row(
-                _repository,
-                issue.title.strip(),
-                _commiter,
-                formatted_packages_str_for_table,
-            )
+        issues_to_approve.append(issue)
+        table.add_row(
+            _repository,
+            issue.title.strip(),
+            _commiter,
+            formatted_packages_str_for_table,
+        )
 
     if issues_to_approve:
         rich.print(table)
         approve_all = Confirm.ask(
-            "Approve all issues?",
+            "Approve and LGTM all issues?",
             choices=["y", "n"],
             default="y",
         )
