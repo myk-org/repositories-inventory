@@ -163,15 +163,6 @@ qe-metrics:
   release: true
   release_url: "https://github.com/RedHatQE/qe-metrics/releases"
 
-qe-tools-base-image:
-  branches:
-    - main
-  container: true
-  container_url: https://quay.io/repository/redhat_msi/qe-tools-base-image
-  github_url: https://github.com/RedHatQE/qe-tools-base-image
-  release: true
-  release_url: ""
-
 rosa-python-client:
   branches:
     - main
