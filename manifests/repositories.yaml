@@ -1,12 +1,3 @@
-ci-jobs-trigger:
-  branches:
-    - main
-  container: true
-  container_url: https://quay.io/repository/redhat_msi/ci-jobs-trigger
-  github_url: https://github.com/RedHatQE/ci-jobs-trigger
-  release: true
-  release_url: https://github.com/RedHatQE/ci-jobs-trigger/releases
-
 cloud-tools:
   branches:
     - main
@@ -15,24 +6,6 @@ cloud-tools:
   github_url: https://github.com/RedHatQE/cloud-tools
   release: true
   release_url: https://pypi.org/project/redhat-qe-cloud-tools/
-
-fedora-zsh:
-  branches:
-    - main
-  container: false
-  container_url: ""
-  github_url: https://github.com/RedHatQE/fedora-zsh
-  release: false
-  release_url: ""
-
-firewatch:
-  branches:
-    - main
-  container: false
-  container_url: ""
-  github_url: https://github.com/RedHatQE/firewatch
-  release: false
-  release_url: ""
 
 flake8-plugins:
   branches:
@@ -154,15 +127,6 @@ python-utility-scripts:
   release: true
   release_url: https://pypi.org/project/python-utility-scripts/
 
-qe-metrics:
-  branches:
-    - main
-  container: true
-  container_url: " quay.io/redhatqe/qe-metrics"
-  github_url: https://github.com/RedHatQE/qe-metrics
-  release: true
-  release_url: "https://github.com/RedHatQE/qe-metrics/releases"
-
 rosa-python-client:
   branches:
     - main
@@ -180,15 +144,6 @@ timeout-sampler:
   github_url: https://github.com/RedHatQE/timeout-sampler
   release: true
   release_url: https://pypi.org/project/timeout-sampler/
-
-vaultrun:
-  branches:
-    - main
-  container: false
-  container_url: ""
-  github_url: https://github.com/RedHatQE/vaultrun
-  release: true
-  release_url: https://pypi.org/project/vaultrun/
 
 mtv-api-tests:
   branches:

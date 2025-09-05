@@ -7,10 +7,7 @@ Template for a new GitHub python repository: [python-template-repository](https:
 
 | Name  | Container | Release | Tags |
 |---|---|---|---|
-| [ci-jobs-trigger](https://github.com/RedHatQE/ci-jobs-trigger) | [:heavy_check_mark:](https://quay.io/repository/redhat_msi/ci-jobs-trigger) | [:heavy_check_mark:](https://github.com/RedHatQE/ci-jobs-trigger/releases) | `main` |
 | [cloud-tools](https://github.com/RedHatQE/cloud-tools) | :x: | [:heavy_check_mark:](https://pypi.org/project/redhat-qe-cloud-tools/) | `main` |
-| [fedora-zsh](https://github.com/RedHatQE/fedora-zsh) | :x: | :x: | `main` |
-| [firewatch](https://github.com/RedHatQE/firewatch) | :x: | :x: | `main` |
 | [flake8-plugins](https://github.com/RedHatQE/flake8-plugins) | :x: | :x: | `main` |
 | [github-webhook-server](https://github.com/myk-org/github-webhook-server) | [:heavy_check_mark:](https://quay.io/repository/myakove/github-webhook-server) | [:heavy_check_mark:](https://pypi.org/project/github-webhook-server/) | `main` |
 | [hive-claim-manager](https://github.com/RedHatQE/hive-claim-manager) | [:heavy_check_mark:](https://github.com/RedHatQE/hive-claim-manager) | [:heavy_check_mark:]() | `main` |
@@ -24,8 +21,6 @@ Template for a new GitHub python repository: [python-template-repository](https:
 | [pyhelper-utils](https://github.com/RedHatQE/pyhelper-utils) | :x: | [:heavy_check_mark:](https://pypi.org/project/pyhelper-utils/) | `main` |
 | [python-simple-logger](https://github.com/RedHatQE/python-simple-logger) | :x: | [:heavy_check_mark:](https://pypi.org/project/python-simple-logger/) | `main` |
 | [python-utility-scripts](https://github.com/RedHatQE/python-utility-scripts) | :x: | [:heavy_check_mark:](https://pypi.org/project/python-utility-scripts/) | `main` |
-| [qe-metrics](https://github.com/RedHatQE/qe-metrics) | [:heavy_check_mark:]( quay.io/redhatqe/qe-metrics) | [:heavy_check_mark:](https://github.com/RedHatQE/qe-metrics/releases) | `main` |
 | [rosa-python-client](https://github.com/RedHatQE/rosa-python-client) | :x: | [:heavy_check_mark:](https://pypi.org/project/rosa-python-client/) | `main` |
 | [timeout-sampler](https://github.com/RedHatQE/timeout-sampler) | :x: | [:heavy_check_mark:](https://pypi.org/project/timeout-sampler/) | `main` |
-| [vaultrun](https://github.com/RedHatQE/vaultrun) | :x: | [:heavy_check_mark:](https://pypi.org/project/vaultrun/) | `main` |
 | [mtv-api-tests](https://github.com/RedHatQE/mtv-api-tests) | [:heavy_check_mark:](TBD) | :x: | `main` |
