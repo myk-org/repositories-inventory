@@ -16,7 +16,7 @@ Template for a new GitHub python repository: [python-template-repository](https:
 | [openshift-cluster-management-python-client](https://github.com/RedHatQE/openshift-cluster-management-python-client) | :x: | [:heavy_check_mark:](<[openshift-cluster-management-python-client](https://pypi.org/project/openshift-cluster-management-python-client/)>) | `main` |
 | [openshift-cluster-management-python-wrapper](https://github.com/RedHatQE/openshift-cluster-management-python-wrapper) | :x: | [:heavy_check_mark:](https://pypi.org/project/openshift-cluster-management-python-wrapper/) | `main` |
 | [openshift-python-utilities](https://github.com/RedHatQE/openshift-python-utilities) | :x: | [:heavy_check_mark:](https://pypi.org/project/openshift-python-utilities/) | `main` |
-| [openshift-python-wrapper](https://github.com/RedHatQE/openshift-python-wrapper) | :x: | [:heavy_check_mark:](https://pypi.org/project/openshift-python-wrapper/) | `main` `v4.18` `v4.17` `v4.16` |
+| [openshift-python-wrapper](https://github.com/RedHatQE/openshift-python-wrapper) | :x: | [:heavy_check_mark:](https://pypi.org/project/openshift-python-wrapper/) | `main` `v4.19` `v4.18` `v4.17` |
 | [openshift-python-wrapper-data-collector](https://github.com/RedHatQE/openshift-python-wrapper-data-collector) | :x: | [:heavy_check_mark:](https://pypi.org/project/openshift-python-wrapper-data-collector/) | `main` |
 | [pyhelper-utils](https://github.com/RedHatQE/pyhelper-utils) | :x: | [:heavy_check_mark:](https://pypi.org/project/pyhelper-utils/) | `main` |
 | [python-simple-logger](https://github.com/RedHatQE/python-simple-logger) | :x: | [:heavy_check_mark:](https://pypi.org/project/python-simple-logger/) | `main` |
