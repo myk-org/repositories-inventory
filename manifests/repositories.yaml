@@ -1,3 +1,21 @@
+ai-cli-runner:
+  branches:
+    - main
+  container: false
+  container_url: ""
+  github_url: https://github.com/myk-org/ai-cli-runner
+  release: true
+  release_url: https://pypi.org/project/ai-cli-runner/
+
+claude-code-config:
+  branches:
+    - main
+  container: false
+  container_url: ""
+  github_url: https://github.com/myk-org/claude-code-config
+  release: false
+  release_url: ""
+
 cloud-tools:
   branches:
     - main
@@ -7,12 +25,30 @@ cloud-tools:
   release: true
   release_url: https://pypi.org/project/redhat-qe-cloud-tools/
 
+docsfy:
+  branches:
+    - main
+  container: false
+  container_url: ""
+  github_url: https://github.com/myk-org/docsfy
+  release: true
+  release_url: https://pypi.org/project/docsfy/
+
 flake8-plugins:
   branches:
     - main
   container: false
   container_url: ""
   github_url: https://github.com/RedHatQE/flake8-plugins
+  release: false
+  release_url: ""
+
+github-metrics:
+  branches:
+    - main
+  container: true
+  container_url: "https://quay.io/repository/myakove/github-metrics"
+  github_url: https://github.com/myk-org/github-metrics
   release: false
   release_url: ""
 
@@ -32,6 +68,15 @@ hive-claim-manager:
   container_url: https://github.com/RedHatQE/hive-claim-manager
   github_url: https://github.com/RedHatQE/hive-claim-manager
   release: true
+  release_url: ""
+
+jenkins-job-insight:
+  branches:
+    - main
+  container: true
+  container_url: "https://quay.io/repository/myakove/jenkins-job-insight"
+  github_url: https://github.com/myk-org/jenkins-job-insight
+  release: false
   release_url: ""
 
 ocp-addons-operators-cli:
@@ -99,6 +144,15 @@ openshift-python-wrapper-data-collector:
   github_url: https://github.com/RedHatQE/openshift-python-wrapper-data-collector
   release: true
   release_url: https://pypi.org/project/openshift-python-wrapper-data-collector/
+
+pr-test-oracle:
+  branches:
+    - main
+  container: false
+  container_url: ""
+  github_url: https://github.com/myk-org/pr-test-oracle
+  release: false
+  release_url: ""
 
 pyhelper-utils:
   branches:

@@ -54,9 +54,8 @@ repository = "https://github.com/myk-org/repositories-inventory"
 [tool.hatch.build.targets.wheel]
 packages = ["scripts"]
 
-[tool.uv]
-dev-dependencies = ["ipdb>=0.13.13", "ipython>=8.18.1"]
-
+[dependency-groups]
+dev = ["ipdb>=0.13.13", "ipython>=8.18.1"]
 
 [build-system]
 requires = ["hatchling"]

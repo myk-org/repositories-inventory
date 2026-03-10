@@ -7,10 +7,15 @@ Template for a new GitHub python repository: [python-template-repository](https:
 
 | Name  | Container | Release | Tags |
 |---|---|---|---|
+| [ai-cli-runner](https://github.com/myk-org/ai-cli-runner) | :x: | [:heavy_check_mark:](https://pypi.org/project/ai-cli-runner/) | `main` |
+| [claude-code-config](https://github.com/myk-org/claude-code-config) | :x: | :x: | `main` |
 | [cloud-tools](https://github.com/RedHatQE/cloud-tools) | :x: | [:heavy_check_mark:](https://pypi.org/project/redhat-qe-cloud-tools/) | `main` |
+| [docsfy](https://github.com/myk-org/docsfy) | :x: | [:heavy_check_mark:](https://pypi.org/project/docsfy/) | `main` |
 | [flake8-plugins](https://github.com/RedHatQE/flake8-plugins) | :x: | :x: | `main` |
+| [github-metrics](https://github.com/myk-org/github-metrics) | [:heavy_check_mark:](https://quay.io/repository/myakove/github-metrics) | :x: | `main` |
 | [github-webhook-server](https://github.com/myk-org/github-webhook-server) | [:heavy_check_mark:](https://quay.io/repository/myakove/github-webhook-server) | [:heavy_check_mark:](https://pypi.org/project/github-webhook-server/) | `main` |
 | [hive-claim-manager](https://github.com/RedHatQE/hive-claim-manager) | [:heavy_check_mark:](https://github.com/RedHatQE/hive-claim-manager) | [:heavy_check_mark:]() | `main` |
+| [jenkins-job-insight](https://github.com/myk-org/jenkins-job-insight) | [:heavy_check_mark:](https://quay.io/repository/myakove/jenkins-job-insight) | :x: | `main` |
 | [ocp-addons-operators-cli](https://github.com/RedHatQE/ocp-addons-operators-cli) | [:heavy_check_mark:](https://quay.io/repository/redhat_msi/ocp-addons-operators-cli) | [:heavy_check_mark:](https://github.com/RedHatQE/ocp-addons-operators-cli/releases) | `main` |
 | [openshift-cli-installer](https://github.com/RedHatQE/openshift-cli-installer) | [:heavy_check_mark:](https://quay.io/repository/redhat_msi/openshift-cli-installer) | [:heavy_check_mark:](https://pypi.org/project/openshift-cli-installer/) | `main` |
 | [openshift-cluster-management-python-client](https://github.com/RedHatQE/openshift-cluster-management-python-client) | :x: | [:heavy_check_mark:](<[openshift-cluster-management-python-client](https://pypi.org/project/openshift-cluster-management-python-client/)>) | `main` |
@@ -18,6 +23,7 @@ Template for a new GitHub python repository: [python-template-repository](https:
 | [openshift-python-utilities](https://github.com/RedHatQE/openshift-python-utilities) | :x: | [:heavy_check_mark:](https://pypi.org/project/openshift-python-utilities/) | `main` |
 | [openshift-python-wrapper](https://github.com/RedHatQE/openshift-python-wrapper) | :x: | [:heavy_check_mark:](https://pypi.org/project/openshift-python-wrapper/) | `main` `v4.20` `v4.19` `v4.18` |
 | [openshift-python-wrapper-data-collector](https://github.com/RedHatQE/openshift-python-wrapper-data-collector) | :x: | [:heavy_check_mark:](https://pypi.org/project/openshift-python-wrapper-data-collector/) | `main` |
+| [pr-test-oracle](https://github.com/myk-org/pr-test-oracle) | :x: | :x: | `main` |
 | [pyhelper-utils](https://github.com/RedHatQE/pyhelper-utils) | :x: | [:heavy_check_mark:](https://pypi.org/project/pyhelper-utils/) | `main` |
 | [python-simple-logger](https://github.com/RedHatQE/python-simple-logger) | :x: | [:heavy_check_mark:](https://pypi.org/project/python-simple-logger/) | `main` |
 | [python-utility-scripts](https://github.com/RedHatQE/python-utility-scripts) | :x: | [:heavy_check_mark:](https://pypi.org/project/python-utility-scripts/) | `main` |
