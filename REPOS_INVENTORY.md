@@ -29,4 +29,4 @@ Template for a new GitHub python repository: [python-template-repository](https:
 | [python-utility-scripts](https://github.com/RedHatQE/python-utility-scripts) | :x: | [:heavy_check_mark:](https://pypi.org/project/python-utility-scripts/) | `main` |
 | [rosa-python-client](https://github.com/RedHatQE/rosa-python-client) | :x: | [:heavy_check_mark:](https://pypi.org/project/rosa-python-client/) | `main` |
 | [timeout-sampler](https://github.com/RedHatQE/timeout-sampler) | :x: | [:heavy_check_mark:](https://pypi.org/project/timeout-sampler/) | `main` |
-| [mtv-api-tests](https://github.com/RedHatQE/mtv-api-tests) | [:heavy_check_mark:](TBD) | :x: | `main` |
+| [mtv-api-tests](https://github.com/RedHatQE/mtv-api-tests) | [:heavy_check_mark:](TBD) | :x: | `main` `v2.11` `v2.12` |
