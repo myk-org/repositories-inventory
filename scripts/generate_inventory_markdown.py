@@ -1,5 +1,5 @@
-import yaml
 import click
+import yaml
 
 
 @click.command("generate-inventory-markdown")
