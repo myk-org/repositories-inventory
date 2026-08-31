@@ -1,22 +1,23 @@
 #!/usr/bin/env python
 
 import logging
-from typing import Any, Dict, List, Tuple
-from rich.progress import Progress, TaskID
 import os
 import shlex
+from contextlib import contextmanager
+from typing import Any, Dict, List, Tuple
+
 import click
 import requests
 import rich
-from rich.prompt import Confirm
-from contextlib import contextmanager
-from rich import box
-from rich.table import Table
-from pyaml_env import parse_config
-from pyhelper_utils.shell import run_command
-from pyhelper_utils.runners import function_runner_with_pdb
-from pyhelper_utils.notifications import send_slack_message
 import yaml
+from pyaml_env import parse_config
+from pyhelper_utils.notifications import send_slack_message
+from pyhelper_utils.runners import function_runner_with_pdb
+from pyhelper_utils.shell import run_command
+from rich import box
+from rich.progress import Progress, TaskID
+from rich.prompt import Confirm
+from rich.table import Table
 
 
 def base_table() -> Table:
@@ -436,18 +437,17 @@ def main(yes: bool, git_base_dir: str, config_file: str, dry_run: bool, verbose:
     if _table.rows:
         rich.print(table)
 
-        if not dry_run:
-            if slack_webhook_url := config_data.get(
-                "slack-webhook-url", os.environ.get("RELEASE_IT_SLACK_WEBHOOK_URL")
-            ):
-                slack_msg = ""
-                for repo_name, data in _slack_msg_dict.items():
-                    for branch, changelog in data.items():
-                        for next_release, changelog in changelog.items():
-                            changelog_str = "\n".join([f"  {cl}" for cl in changelog.splitlines()])
-                            slack_msg += f"{repo_name}\n  {branch}\n    {next_release}    {changelog_str}\n\n"
+        if not dry_run and (
+            slack_webhook_url := config_data.get("slack-webhook-url", os.environ.get("RELEASE_IT_SLACK_WEBHOOK_URL"))
+        ):
+            slack_msg = ""
+            for repo_name, data in _slack_msg_dict.items():
+                for branch, changelog in data.items():
+                    for next_release, changelog in changelog.items():
+                        changelog_str = "\n".join([f"  {cl}" for cl in changelog.splitlines()])
+                        slack_msg += f"{repo_name}\n  {branch}\n    {next_release}    {changelog_str}\n\n"
 
-                send_slack_message(message=slack_msg, webhook_url=slack_webhook_url)
+            send_slack_message(message=slack_msg, webhook_url=slack_webhook_url)
 
     else:
         rich.print("[yellow][bold]No new content found for any repositories[not bold][not yellow]")
