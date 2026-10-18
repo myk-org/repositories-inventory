@@ -145,6 +145,15 @@ openshift-python-wrapper-data-collector:
   release: true
   release_url: https://pypi.org/project/openshift-python-wrapper-data-collector/
 
+pi-config:
+  branches:
+    - main
+  container: true
+  container_url: "https://quay.io/repository/myakove/pi-config"
+  github_url: https://github.com/myk-org/pi-config
+  release: true
+  release_url: https://github.com/myk-org/pi-config/releases
+
 pr-test-oracle:
   branches:
     - main
@@ -189,6 +198,15 @@ rosa-python-client:
   github_url: https://github.com/RedHatQE/rosa-python-client
   release: true
   release_url: https://pypi.org/project/rosa-python-client/
+
+rootcoz:
+  branches:
+    - main
+  container: true
+  container_url: "https://quay.io/repository/myakove/rootcoz"
+  github_url: https://github.com/myk-org/rootcoz
+  release: true
+  release_url: https://github.com/myk-org/rootcoz/releases
 
 timeout-sampler:
   branches:
