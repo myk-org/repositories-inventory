@@ -23,10 +23,12 @@ Template for a new GitHub python repository: [python-template-repository](https:
 | [openshift-python-utilities](https://github.com/RedHatQE/openshift-python-utilities) | :x: | [:heavy_check_mark:](https://pypi.org/project/openshift-python-utilities/) | `main` |
 | [openshift-python-wrapper](https://github.com/RedHatQE/openshift-python-wrapper) | :x: | [:heavy_check_mark:](https://pypi.org/project/openshift-python-wrapper/) | `main` `v4.20` `v4.19` `v4.18` |
 | [openshift-python-wrapper-data-collector](https://github.com/RedHatQE/openshift-python-wrapper-data-collector) | :x: | [:heavy_check_mark:](https://pypi.org/project/openshift-python-wrapper-data-collector/) | `main` |
+| [pi-config](https://github.com/myk-org/pi-config) | [:heavy_check_mark:](https://quay.io/repository/myakove/pi-config) | [:heavy_check_mark:](https://github.com/myk-org/pi-config/releases) | `main` |
 | [pr-test-oracle](https://github.com/myk-org/pr-test-oracle) | :x: | :x: | `main` |
 | [pyhelper-utils](https://github.com/RedHatQE/pyhelper-utils) | :x: | [:heavy_check_mark:](https://pypi.org/project/pyhelper-utils/) | `main` |
 | [python-simple-logger](https://github.com/RedHatQE/python-simple-logger) | :x: | [:heavy_check_mark:](https://pypi.org/project/python-simple-logger/) | `main` |
 | [python-utility-scripts](https://github.com/RedHatQE/python-utility-scripts) | :x: | [:heavy_check_mark:](https://pypi.org/project/python-utility-scripts/) | `main` |
 | [rosa-python-client](https://github.com/RedHatQE/rosa-python-client) | :x: | [:heavy_check_mark:](https://pypi.org/project/rosa-python-client/) | `main` |
+| [rootcoz](https://github.com/myk-org/rootcoz) | [:heavy_check_mark:](https://quay.io/repository/myakove/rootcoz) | [:heavy_check_mark:](https://github.com/myk-org/rootcoz/releases) | `main` |
 | [timeout-sampler](https://github.com/RedHatQE/timeout-sampler) | :x: | [:heavy_check_mark:](https://pypi.org/project/timeout-sampler/) | `main` |
 | [mtv-api-tests](https://github.com/RedHatQE/mtv-api-tests) | [:heavy_check_mark:](TBD) | :x: | `main` `v2.11` `v2.12` |
