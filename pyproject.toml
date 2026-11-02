@@ -17,7 +17,7 @@ show_error_codes = true
 warn_unused_ignores = true
 
 [project]
-requires-python = ">=3.9"
+requires-python = ">=3.14,<3.15"
 name = "repositories-inventory"
 version = "0.1.0"
 description = "General scripts"
