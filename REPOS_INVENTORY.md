@@ -21,7 +21,7 @@ Template for a new GitHub python repository: [python-template-repository](https:
 | [openshift-cluster-management-python-client](https://github.com/RedHatQE/openshift-cluster-management-python-client) | :x: | [:heavy_check_mark:](<[openshift-cluster-management-python-client](https://pypi.org/project/openshift-cluster-management-python-client/)>) | `main` |
 | [openshift-cluster-management-python-wrapper](https://github.com/RedHatQE/openshift-cluster-management-python-wrapper) | :x: | [:heavy_check_mark:](https://pypi.org/project/openshift-cluster-management-python-wrapper/) | `main` |
 | [openshift-python-utilities](https://github.com/RedHatQE/openshift-python-utilities) | :x: | [:heavy_check_mark:](https://pypi.org/project/openshift-python-utilities/) | `main` |
-| [openshift-python-wrapper](https://github.com/RedHatQE/openshift-python-wrapper) | :x: | [:heavy_check_mark:](https://pypi.org/project/openshift-python-wrapper/) | `main` `v4.20` `v4.19` `v4.18` |
+| [openshift-python-wrapper](https://github.com/RedHatQE/openshift-python-wrapper) | :x: | [:heavy_check_mark:](https://pypi.org/project/openshift-python-wrapper/) | `main` `v4.22` `v4.21` `v4.20` |
 | [openshift-python-wrapper-data-collector](https://github.com/RedHatQE/openshift-python-wrapper-data-collector) | :x: | [:heavy_check_mark:](https://pypi.org/project/openshift-python-wrapper-data-collector/) | `main` |
 | [pi-config](https://github.com/myk-org/pi-config) | [:heavy_check_mark:](https://quay.io/repository/myakove/pi-config) | [:heavy_check_mark:](https://github.com/myk-org/pi-config/releases) | `main` |
 | [pr-test-oracle](https://github.com/myk-org/pr-test-oracle) | :x: | :x: | `main` |
