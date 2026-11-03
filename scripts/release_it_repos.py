@@ -225,10 +225,25 @@ def make_release_for_branch(
                 f"Running release-it --changelog to check if need to make release for {repo_name} branch {branch}"
             )
 
-        _, changelog, _ = run_command(
+        # release-it exits 1 ("WARNING No changelog found" on stderr) when there is nothing to release
+        changelog_ok, changelog, changelog_err = run_command(
             shlex.split("release-it --changelog"),
             verify_stderr=False,
+            check=False,
         )
+
+        if not changelog_ok and "No changelog found" not in changelog_err:
+            progress.console.print(f"Failed to get changelog for {repo_name} branch {branch}: {changelog_err}")
+            table.add_row(
+                repo_name,
+                branch,
+                "",
+                changelog_err,
+                "Failed",
+            )
+            progress.update(branch_task, advance=task_progress, refresh=True)
+            progress.update(repo_task, advance=task_progress, refresh=True)
+            return slack_msg_dict, table
 
         if "undefined" in changelog or not changelog:
             if verbose:
