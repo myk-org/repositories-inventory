@@ -7,7 +7,6 @@ Template for a new GitHub python repository: [python-template-repository](https:
 
 | Name  | Container | Release | Tags |
 |---|---|---|---|
-| [claude-code-config](https://github.com/myk-org/claude-code-config) | :x: | :x: | `main` |
 | [cloud-tools](https://github.com/RedHatQE/cloud-tools) | :x: | [:heavy_check_mark:](https://pypi.org/project/redhat-qe-cloud-tools/) | `main` |
 | [flake8-plugins](https://github.com/RedHatQE/flake8-plugins) | :x: | :x: | `main` |
 | [github-metrics](https://github.com/myk-org/github-metrics) | [:heavy_check_mark:](https://quay.io/repository/myakove/github-metrics) | :x: | `main` |

@@ -1,12 +1,3 @@
-claude-code-config:
-  branches:
-    - main
-  container: false
-  container_url: ""
-  github_url: https://github.com/myk-org/claude-code-config
-  release: false
-  release_url: ""
-
 cloud-tools:
   branches:
     - main
