@@ -1,12 +1,3 @@
-ai-cli-runner:
-  branches:
-    - main
-  container: false
-  container_url: ""
-  github_url: https://github.com/myk-org/ai-cli-runner
-  release: true
-  release_url: https://pypi.org/project/ai-cli-runner/
-
 claude-code-config:
   branches:
     - main
@@ -24,15 +15,6 @@ cloud-tools:
   github_url: https://github.com/RedHatQE/cloud-tools
   release: true
   release_url: https://pypi.org/project/redhat-qe-cloud-tools/
-
-docsfy:
-  branches:
-    - main
-  container: false
-  container_url: ""
-  github_url: https://github.com/myk-org/docsfy
-  release: true
-  release_url: https://pypi.org/project/docsfy/
 
 flake8-plugins:
   branches:
@@ -60,24 +42,6 @@ github-webhook-server:
   github_url: https://github.com/myk-org/github-webhook-server
   release: true
   release_url: https://pypi.org/project/github-webhook-server/
-
-hive-claim-manager:
-  branches:
-    - main
-  container: true
-  container_url: https://github.com/RedHatQE/hive-claim-manager
-  github_url: https://github.com/RedHatQE/hive-claim-manager
-  release: true
-  release_url: ""
-
-jenkins-job-insight:
-  branches:
-    - main
-  container: true
-  container_url: "https://quay.io/repository/myakove/jenkins-job-insight"
-  github_url: https://github.com/myk-org/jenkins-job-insight
-  release: false
-  release_url: ""
 
 ocp-addons-operators-cli:
   branches:
@@ -151,7 +115,7 @@ pi-config:
   container: true
   container_url: "https://quay.io/repository/myakove/pi-config"
   github_url: https://github.com/myk-org/pi-config
-  release: true
+  release: false
   release_url: https://github.com/myk-org/pi-config/releases
 
 pr-test-oracle:
@@ -205,7 +169,7 @@ rootcoz:
   container: true
   container_url: "https://quay.io/repository/myakove/rootcoz"
   github_url: https://github.com/myk-org/rootcoz
-  release: true
+  release: false
   release_url: https://github.com/myk-org/rootcoz/releases
 
 timeout-sampler:
