@@ -1,22 +1,23 @@
 #!/usr/bin/env python
 
 import logging
-from typing import Any, Dict, List, Tuple
-from rich.progress import Progress, TaskID
 import os
 import shlex
+from contextlib import contextmanager
+from typing import Any
+
 import click
 import requests
 import rich
-from rich.prompt import Confirm
-from contextlib import contextmanager
-from rich import box
-from rich.table import Table
-from pyaml_env import parse_config
-from pyhelper_utils.shell import run_command
-from pyhelper_utils.runners import function_runner_with_pdb
-from pyhelper_utils.notifications import send_slack_message
 import yaml
+from pyaml_env import parse_config
+from pyhelper_utils.notifications import send_slack_message
+from pyhelper_utils.runners import function_runner_with_pdb
+from pyhelper_utils.shell import run_command
+from rich import box
+from rich.progress import Progress, TaskID
+from rich.prompt import Confirm
+from rich.table import Table
 
 
 def base_table() -> Table:
@@ -99,7 +100,7 @@ def change_directory(path: str, progress: Progress, verbose: bool) -> Any:
     os.chdir(current_path)
 
 
-def get_repositories(progress: Progress, verbose: bool, repositories: Dict[str, List[str]] | str) -> dict:
+def get_repositories(progress: Progress, verbose: bool, repositories: dict[str, list[str]] | str) -> dict:
     final_repositories = {}
 
     if isinstance(repositories, str):
@@ -125,8 +126,8 @@ def get_repositories(progress: Progress, verbose: bool, repositories: Dict[str, 
     return final_repositories
 
 
-def process_config(config_file: str, progress: Progress, verbose: bool) -> Dict:
-    config_data: Dict = {}
+def process_config(config_file: str, progress: Progress, verbose: bool) -> dict:
+    config_data: dict = {}
     if config_file:
         if os.path.isfile(config_file):
             if verbose:
@@ -147,7 +148,7 @@ def process_config(config_file: str, progress: Progress, verbose: bool) -> Dict:
 
 
 def skip_repository(
-    config_data: Dict,
+    config_data: dict,
     repo_name: str,
     progress: Progress,
     verbose: bool,
@@ -173,11 +174,11 @@ def get_repository_data_for_release(
     task: TaskID,
     task_progress: int,
     verbose: bool,
-    config_data: Dict,
-    branches: List[str],
-    repositories_mapping: Dict,
+    config_data: dict,
+    branches: list[str],
+    repositories_mapping: dict,
     git_base_dir: str,
-) -> Tuple:
+) -> tuple:
     repo_task = progress.add_task(f"  [yellow]{repo_name} ", total=len(branches))
     repo_path = None
     _repo_name = None
@@ -210,8 +211,8 @@ def make_release_for_branch(
     verbose: bool,
     task_progress: int,
     repo_task: TaskID,
-    slack_msg_dict: Dict,
-) -> Tuple:
+    slack_msg_dict: dict,
+) -> tuple:
     slack_msg_dict[repo_name][branch] = {}
     branch_task = progress.add_task(f"    [blue]{branch} ", total=task_progress)
     with change_git_branch(
@@ -334,18 +335,18 @@ def make_release_for_branch(
 
 
 def process_repositories_releases(
-    repositories: Dict[str, List[str]],
+    repositories: dict[str, list[str]],
     progress: Progress,
     verbose: bool,
-    config_data: Dict,
+    config_data: dict,
     task_progress: int,
-    repositories_mapping: Dict,
+    repositories_mapping: dict,
     git_base_dir: str,
     dry_run: bool,
     yes: bool,
     table: Table,
-    slack_msg_dict: Dict,
-) -> Tuple[Dict, Table]:
+    slack_msg_dict: dict,
+) -> tuple[dict, Table]:
     task = progress.add_task("[green]Checking for releases ", total=len(repositories))
     for repo_name, branches in repositories.items():
         slack_msg_dict[repo_name] = {}
@@ -420,7 +421,7 @@ def main(yes: bool, git_base_dir: str, config_file: str, dry_run: bool, verbose:
         progress.console.print(f"Git base directory {git_base_dir} does not exist")
         exit(1)
 
-    slack_msg_dict: Dict = {}
+    slack_msg_dict: dict = {}
     _repositories = config_data.get(
         "repositories",
         "https://raw.githubusercontent.com/myk-org/repositories-inventory/refs/heads/main/manifests/repositories.yaml",
@@ -451,18 +452,17 @@ def main(yes: bool, git_base_dir: str, config_file: str, dry_run: bool, verbose:
     if _table.rows:
         rich.print(table)
 
-        if not dry_run:
-            if slack_webhook_url := config_data.get(
-                "slack-webhook-url", os.environ.get("RELEASE_IT_SLACK_WEBHOOK_URL")
-            ):
-                slack_msg = ""
-                for repo_name, data in _slack_msg_dict.items():
-                    for branch, changelog in data.items():
-                        for next_release, changelog in changelog.items():
-                            changelog_str = "\n".join([f"  {cl}" for cl in changelog.splitlines()])
-                            slack_msg += f"{repo_name}\n  {branch}\n    {next_release}    {changelog_str}\n\n"
+        if not dry_run and (
+            slack_webhook_url := config_data.get("slack-webhook-url", os.environ.get("RELEASE_IT_SLACK_WEBHOOK_URL"))
+        ):
+            slack_msg = ""
+            for repo_name, data in _slack_msg_dict.items():
+                for branch, changelog in data.items():
+                    for next_release, changelog in changelog.items():
+                        changelog_str = "\n".join([f"  {cl}" for cl in changelog.splitlines()])
+                        slack_msg += f"{repo_name}\n  {branch}\n    {next_release}    {changelog_str}\n\n"
 
-                send_slack_message(message=slack_msg, webhook_url=slack_webhook_url)
+            send_slack_message(message=slack_msg, webhook_url=slack_webhook_url)
 
     else:
         rich.print("[yellow][bold]No new content found for any repositories[not bold][not yellow]")
