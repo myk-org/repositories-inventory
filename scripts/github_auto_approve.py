@@ -1,6 +1,5 @@
 import os
 import re
-from typing import List, Tuple
 
 import click
 import rich
@@ -24,13 +23,13 @@ def generate_table() -> Table:
     return table
 
 
-def generate_formatted_str(issue: Issue, commiter: str) -> Tuple[str, str]:
+def generate_formatted_str(issue: Issue, commiter: str) -> tuple[str, str]:
     formatted_packages_str_for_table = ""
     formatted_packages_str_for_ask = "  "
     formatted_packages_str_for_ask_separator = " \n  "
 
-    updated_packages: List[Tuple[str, str]] = []
-    formatted_list: List[str] = []
+    updated_packages: list[tuple[str, str]] = []
+    formatted_list: list[str] = []
     if commiter == "renovate[bot]":
         updated_packages = re.findall(r"\[(.*?)\].*?-> `(.*)`", issue.body)
 
@@ -58,8 +57,8 @@ def generate_formatted_str(issue: Issue, commiter: str) -> Tuple[str, str]:
 @click.option("-t", "--token", help="GitHub token")
 @click.option("-d", "--dry-run", is_flag=True, help="Dry run")
 def main(users: str, yes: bool, token: str, dry_run: bool) -> None:
-    issues_to_approve: List[Issue] = []
-    users_to_match: List[str] = users.split(",")
+    issues_to_approve: list[Issue] = []
+    users_to_match: list[str] = users.split(",")
     api = Github(login_or_token=token or os.environ["GITHUB_TOKEN"])
     table = generate_table()
 
